@@ -12,4 +12,6 @@
 
 //curl -X CAT http://localhost:8000/secrets
 
-curl http://localhost:8000?operation=difference&number1=2&number2=2
+//curl http://localhost:8000?operation=difference&number1=2&number2=2
+
+curl http://localhost:8000
