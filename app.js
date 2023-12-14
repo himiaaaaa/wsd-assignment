@@ -1,25 +1,24 @@
-//3.4.1 exercises 
+//3.5.1 exercise
 /* const handleRequest = (request) => {
-
-  let message = "Unable to comply...";
-  if (request.method === "GET") {
-    message = "Retrieving data...";
-  } else if (request.method === "POST") {
-    message = "Posting data...";
-  } 
-
-  return new Response(message);
+  const url = new URL(request.url);
+  return new Response(`${request.method} request made to path ${url.pathname}`);
 };
 
-Deno.serve(handleRequest); */
+Deno.serve(handleRequest);
+*/
 
-//3.4.2 exercises
+//3.5.2 exercise
 const handleRequest = (request) => {
+  const url = new URL(request.url)
 
-  return new Response(`You made a request with method ${request.method}`)
-  
+  if (url.pathname === "/secret" && request.method === "PEEK"){
+    return new Response("Peeking at secret data...")
+  } else {
+    return new Response("There is nothing to see here...")
+  }
 }
 
 Deno.serve(handleRequest)
+
 
 

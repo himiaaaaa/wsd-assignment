@@ -1,0 +1,7 @@
+//curl http://localhost:8000
+
+//curl http://localhost:8000/hello-world
+
+//curl -X PEEK http://localhost:8000/secret
+
+curl -X PEEK http://localhost:8000/notsecret
