@@ -21,5 +21,3 @@ const handleRequest = (request) => {
 }
 
 Deno.serve(handleRequest)
-
-
