@@ -1,20 +1,17 @@
-//3.5.1 exercise
-/* const handleRequest = (request) => {
-  const url = new URL(request.url);
-  return new Response(`${request.method} request made to path ${url.pathname}`);
-};
-
-Deno.serve(handleRequest);
-*/
-
-//3.5.2 exercise
 const handleRequest = (request) => {
   const url = new URL(request.url)
+  const params = url.searchParams
 
-  if (url.pathname === "/secret" && request.method === "PEEK"){
-    return new Response("Peeking at secret data...")
+  const operation = params.get("operation")
+  const number1 = Number(params.get("number1"))
+  const number2 = Number(params.get("number2"))
+
+  if(operation === "sum"){
+    return new Response(`${number1 + number2}`)
+  } else if (operation === "product"){
+    return new Response(`${number1 * number2}`)
   } else {
-    return new Response("There is nothing to see here...")
+    return new Response("Invalid parameters.")
   }
 }
 
