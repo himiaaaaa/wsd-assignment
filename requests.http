@@ -19,3 +19,5 @@
 //curl -X DIDNOT http://localhost:8000/lol
 
 curl http://localhost:8000
+
+curl http://localhost:8000?store=5
