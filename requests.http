@@ -16,4 +16,6 @@
 
 //curl http://localhost:8000/congrats?heroOfTheDay=kk
 
-curl -X DIDNOT http://localhost:8000/lol
+//curl -X DIDNOT http://localhost:8000/lol
+
+curl http://localhost:8000
