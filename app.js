@@ -6,32 +6,13 @@ const eta = new Eta({ views: `${Deno.cwd()}/templates/` });
 const app = new Hono();
 
 const data = {
-  todos: [
-    {  
-      name: "Write a TODO app", 
-      status: false
-    },
-    {  
-      name: "Show a list of TODOs", 
-      status: true
-    },
-    {  
-      name: "Move TODOs to a database", 
-      status: false
-    },
-    {  
-      name: "Allow marking TODOs done", 
-      status: false
-    },
-  ],
+  title: "My Title",
+  heading: "My Heading",
 };
 
-app.get("/", (c) => {
-  return c.html(eta.render("index.eta", data));
-});
+app.get("/", (c) => c.html(eta.render("index.eta", data)));
 
-export default app;
-
+export default app
 
 
 

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello there!</title>
-  </head>
-  <body>
-    <ul>
-      <% it.todos.forEach((todo) => { %>
-        <li><%= todo.name %> (<%= todo.status %>)</li>
-      <% }); %>
-    </ul>
-  </body>
-</html>
+<% layout("/layouts/layout.eta") %>
+
+<h1><%= it.heading ?? "The heading!" %></h1>
+<p>The content!</p>
